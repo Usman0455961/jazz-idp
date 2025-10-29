@@ -46,11 +46,8 @@ window.JazzAuth = {
     const poll = setInterval(() => {
       if (popup?.closed) {
         clearInterval(poll);
-        const token = localStorage.getItem('jazz_token');
-        if (token) {
-          onLogin(token);
-          window.location.reload();
-        }
+        onLogin?.();  // Just notify
+        window.location.reload();  // Force re-check
       }
     }, 500);
   }
