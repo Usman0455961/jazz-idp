@@ -13,16 +13,15 @@ window.JazzAuth = {
       if (container) {
         const button = document.createElement('button');
         button.innerHTML = `
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-          </svg>
+          <img src="jazz-logo.png" alt="Jazz Logo" style="width: 20px; height: 20px; margin-right: 8px;" />
           ${buttonText}
         `;
         button.style.cssText = `
           display: flex; align-items: center; justify-content: center;
           background: ${buttonColor}; color: white; padding: 10px 16px;
           border-radius: 8px; border: none; font-weight: 600; cursor: pointer;
-          transition: 0.2s; width: 100%;
+          transition: 0.2s; width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          font-size: 16px;
         `;
         button.onmouseover = () => button.style.opacity = '0.9';
         button.onmouseout = () => button.style.opacity = '1';
